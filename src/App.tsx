@@ -15,7 +15,31 @@ const Stats = lazy(() =>
 );
 
 // Fallback component
-const Loading = () => <div>Loading...</div>;
+const Loading = () => (
+  <div style={styles.loaderContainer}>
+    <div style={styles.loaderText}>Loading...</div>
+  </div>
+);
+
+const styles: { loaderContainer: React.CSSProperties; loaderText: React.CSSProperties } = {
+  loaderContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: '100vh',
+    width: '100vw',
+    position: 'fixed', // Fixed position for full screen overlay
+    top: 0,
+    left: 0,
+    backgroundColor: 'rgba(255, 255, 255, 0.9)', // Optional: Add a slight overlay
+    zIndex: 9999, // Ensure it appears on top of other elements
+  },
+  loaderText: {
+    fontSize: '1.5rem',
+    fontWeight: 'bold',
+    color: '#333', // Customize text color
+  },
+};
 
 function App() {
   return (
