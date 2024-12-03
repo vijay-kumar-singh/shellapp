@@ -13,7 +13,7 @@ export function Home() {
   return (
     <div className="text-center">
       <h1 className="text-4xl font-bold text-gray-900 mb-8">
-        Welcome to Widget Dashboard
+        Welcome to Widget Dashboard+
       </h1>
       <p className="text-xl text-gray-600 mb-8">
         Explore our collection of dynamic widgets
@@ -23,7 +23,7 @@ export function Home() {
         className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
         onClick={handleExploreClick}
       >
-        View Widgets
+        View Widget
         <ArrowRight className="ml-2 h-5 w-5" />
       </Link>
     </div>
